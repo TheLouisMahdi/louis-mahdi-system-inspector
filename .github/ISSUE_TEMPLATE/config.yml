@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Private security report
+    url: https://github.com/TheLouisMahdi/louis-mahdi-system-inspector/security/advisories/new
+    about: Report a vulnerability privately without exposing sensitive details.
+  - name: Usage and documentation
+    url: https://github.com/TheLouisMahdi/louis-mahdi-system-inspector#readme
+    about: Review installation, report modes, privacy behavior, compatibility, and command-line examples.
