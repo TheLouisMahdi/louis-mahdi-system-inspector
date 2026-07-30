@@ -39,6 +39,13 @@ jobs:
           if ($sample.Application.Version -ne '2.2.0') { throw 'Unexpected sample application version.' }
           if (-not $sample.Privacy.Enabled) { throw 'Sample privacy mode must be enabled.' }
 
+      - name: Validate source manifest generator
+        shell: powershell
+        run: |
+          .\tools\New-SourceManifest.ps1
+          if (-not (Test-Path .\SOURCE_MANIFEST_SHA256.txt)) { throw 'The source manifest was not generated.' }
+          if (@(Get-Content .\SOURCE_MANIFEST_SHA256.txt).Count -lt 10) { throw 'The source manifest is unexpectedly short.' }
+
       - name: Build and self-test portable EXE
         shell: cmd
         run: echo. | call Build_LouisMahdi_System_Inspector_ONE_FILE.bat
