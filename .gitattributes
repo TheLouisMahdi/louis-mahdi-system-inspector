@@ -5,6 +5,9 @@
 *.cs text eol=crlf
 *.md text eol=lf
 *.json text eol=lf
+*.yml text eol=lf
+*.yaml text eol=lf
 *.txt text eol=lf
+*.svg text eol=lf
 *.png binary
 *.ico binary
