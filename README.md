@@ -8,7 +8,8 @@
 
 <br />
 
-[![Version](https://img.shields.io/badge/version-2.2.0-39d353?style=for-the-badge&labelColor=0d1117)](#)
+[![Version](https://img.shields.io/badge/version-2.2.0-39d353?style=for-the-badge&labelColor=0d1117)](https://github.com/TheLouisMahdi/louis-mahdi-system-inspector/releases/latest)
+[![Download](https://img.shields.io/badge/download-latest%20release-39d353?style=for-the-badge&logo=github&logoColor=white&labelColor=0d1117)](https://github.com/TheLouisMahdi/louis-mahdi-system-inspector/releases/latest)
 [![Windows](https://img.shields.io/badge/Windows-10%20%7C%2011%20%7C%20Server-39d353?style=for-the-badge&logo=windows11&logoColor=white&labelColor=0d1117)](#supported-environments)
 [![PowerShell](https://img.shields.io/badge/PowerShell-5.1%2B-39d353?style=for-the-badge&logo=powershell&logoColor=white&labelColor=0d1117)](#technology)
 [![License](https://img.shields.io/badge/license-MIT-39d353?style=for-the-badge&labelColor=0d1117)](LICENSE)
@@ -19,6 +20,27 @@
 [![AnyCPU](https://img.shields.io/badge/launcher-AnyCPU-2ea043?style=flat-square&labelColor=161b22)](#portable-single-file-build)
 
 </div>
+
+---
+
+## Download for Windows users
+
+<div align="center">
+
+### No source code or build tools are required for normal use.
+
+[![Download latest release](https://img.shields.io/badge/Download-Latest%20Windows%20EXE-39d353?style=for-the-badge&logo=windows11&logoColor=white&labelColor=0d1117)](https://github.com/TheLouisMahdi/louis-mahdi-system-inspector/releases/latest)
+
+</div>
+
+1. Open the [latest GitHub Release](https://github.com/TheLouisMahdi/louis-mahdi-system-inspector/releases/latest).
+2. Download `LouisMahdi_System_Inspector.exe` from the **Assets** section.
+3. Optionally download the matching `.sha256.txt` file to verify integrity.
+4. Run the EXE and choose **Standard** for general use or **Extended** for deeper diagnostics.
+
+> The public Release is the recommended option for ordinary users. The repository source and builder are intended for developers, auditing and custom builds.
+
+> The EXE is currently unsigned. Windows SmartScreen may display an unknown-publisher warning. Verify that the file was downloaded from this repository and compare its SHA-256 checksum before running it.
 
 ---
 
@@ -138,13 +160,13 @@ flowchart LR
 PowerShell 5.1 / 7.x   Data collection, validation and report generation
 Windows Forms          Desktop user interface
 C#                     Portable AnyCPU launcher
-Batch                   Offline validation and build pipeline
-.NET Framework          Native Windows compilation and runtime support
+Batch                  Offline validation and build pipeline
+.NET Framework         Native Windows compilation and runtime support
 ```
 
 ---
 
-## Quick start
+## Quick start for developers
 
 ### Run from source
 
@@ -183,7 +205,7 @@ The offline builder:
 1. Validates PowerShell syntax and application startup contracts.
 2. Runs mocked provider tests.
 3. Embeds the application source as a managed assembly resource.
-4. stores the expected source SHA-256 inside the launcher.
+4. Stores the expected source SHA-256 inside the launcher.
 5. Compiles an AnyCPU Windows executable using the built-in .NET Framework compiler.
 6. Runs a launcher self-test.
 7. Generates a SHA-256 checksum for the final executable.
@@ -195,7 +217,7 @@ LouisMahdi_System_Inspector.exe
 LouisMahdi_System_Inspector.exe.sha256.txt
 ```
 
-Only the EXE is required for normal distribution.
+Only the EXE is required for normal distribution. For public users, publish it through [GitHub Releases](https://github.com/TheLouisMahdi/louis-mahdi-system-inspector/releases).
 
 ---
 
