@@ -1,0 +1,230 @@
+LouisMahdi System Inspector
+========================================================================================
+Application Version : 2.2.0
+Schema Version      : 2.1
+Project             : https://github.com/TheLouisMahdi
+Generated           : 2026-07-30T10:30:00+03:30
+Mode / Privacy      : Standard / Enabled
+
+========================================================================================
+REPORT SUMMARY
+========================================================================================
+
+[Summary]
+Application Name                  : LouisMahdi System Inspector
+Application Version               : 2.2.0
+Report Mode                       : Standard
+Privacy Mode Status               : Enabled
+Collection Policy                 : Read-only and offline
+========================================================================================
+COMPUTER
+========================================================================================
+
+[Computer]
+Computer Name                     : SAMPLE-PC
+System Manufacturer               : Example Systems Inc.
+Commercial Model Name             : Example Workstation 14
+System SKU                        : EX-1400
+Chassis Type                      : Notebook
+Virtual Machine Detection         : No
+Total Installed Physical Memory   : 24.00 GiB
+Total Memory Visible to Windows   : 23.38 GiB
+System UUID                       : Redacted by privacy mode
+========================================================================================
+WINDOWS
+========================================================================================
+
+[Operating System]
+Windows Product Name              : Windows 11 Pro
+Edition ID                        : Professional
+Display Version                   : 25H2
+Full Version                      : 10.0.26200
+Complete Build String             : 26200.8875
+Installation Date                 : 2026-01-30T04:07:00+03:30
+Last Boot Time                    : 2026-07-26T14:59:00+03:30
+Calculated Uptime                 : 3 days, 20 hours, 21 minutes, 0 seconds
+Operating-System Architecture     : 64-bit
+========================================================================================
+PROCESSOR
+========================================================================================
+
+[Processor Socket 1]
+Processor Name                    : Example 6-Core Processor
+Manufacturer                      : AMD
+Architecture                      : x64
+Physical Cores                    : 6 cores
+Logical Processors                : 12 logical processors
+SMBIOS-Reported Maximum Clock     : 3.00 GHz
+Live Frequency Sample             : Not available
+Advertised Boost Clock            : Not applicable
+========================================================================================
+PHYSICAL MEMORY
+========================================================================================
+
+[Memory Module 1]
+Report Index                      : 1
+Device Locator                    : DIMM 0
+Bank Label                        : P0 CHANNEL A
+Tag                               : Physical Memory 0
+Reported Manufacturer             : Not available
+Inferred Manufacturer             : Crucial [Inferred; confidence: High; source: Part-number prefix database]
+Capacity                          : 8.00 GiB
+Configured Clock Speed            : 3200 MHz
+
+[Memory Module 2]
+Report Index                      : 2
+Device Locator                    : DIMM 0
+Bank Label                        : P0 CHANNEL B
+Tag                               : Physical Memory 1
+Reported Manufacturer             : Not available
+Inferred Manufacturer             : Crucial [Inferred; confidence: High; source: Part-number prefix database]
+Capacity                          : 16.00 GiB
+Configured Clock Speed            : 3200 MHz
+========================================================================================
+GRAPHICS ADAPTERS
+========================================================================================
+
+[Graphics Adapter 1]
+GPU Name                          : Example Integrated Graphics
+Adapter Classification            : Integrated or unknown [Inferred; confidence: Medium; source: Application classification]
+WMI-Reported Adapter Memory       : 512.00 MiB
+Vendor-Reported Dedicated VRAM    : Vendor tool unavailable
+
+[Graphics Adapter 2]
+GPU Name                          : Example Dedicated GPU
+Adapter Classification            : Dedicated or unknown [Inferred; confidence: Medium; source: Application classification]
+WMI-Reported Adapter Memory       : 4.00 GiB
+Vendor-Reported Dedicated VRAM    : 6.00 GiB
+========================================================================================
+DISPLAYS AND MONITORS
+========================================================================================
+
+[Display 1]
+Friendly Name                     : Example Internal Display
+Connection State                  : Active
+Primary Display                   : Yes
+Active Resolution                 : 1920 x 1080 pixels
+Refresh Rate                      : 60 Hz
+Monitor Serial Number             : Redacted by privacy mode
+========================================================================================
+MOTHERBOARD
+========================================================================================
+
+[Baseboard]
+Manufacturer                      : Example Boards Ltd.
+Product                           : EXAMPLE-BOARD-01
+Serial Number                     : Redacted by privacy mode
+========================================================================================
+BIOS AND FIRMWARE
+========================================================================================
+
+[BIOS]
+BIOS Manufacturer                 : Example Firmware Corp.
+SMBIOS BIOS Version               : 1.20
+BIOS Release Date                 : 2025-11-10
+========================================================================================
+SECURITY: UEFI, SECURE BOOT, AND TPM
+========================================================================================
+
+[Firmware and Secure Boot]
+Firmware Mode                     : UEFI
+Secure Boot Supported             : Yes
+Secure Boot Enabled               : No
+Secure Boot Query Status          : Available
+
+[TPM]
+TPM Present                       : Yes
+TPM Ready                         : Yes
+TPM Specification Version         : 2.0
+========================================================================================
+PHYSICAL STORAGE
+========================================================================================
+
+[Physical Disk 1]
+Model                             : EXAMPLE NVME 256GB
+Reported Manufacturer             : Not available
+Inferred Manufacturer             : Not available [Inferred; confidence: Unknown; source: Model-prefix database]
+Media Type                        : SSD
+Bus Type                          : NVMe
+Manufacturer Capacity             : 256.06 GB
+Windows Binary Size               : 238.47 GiB
+Exact Capacity                    : 256,060,514,304 bytes
+Storage HealthStatus              : Healthy
+SMART Prediction Status           : No predicted failure reported
+Detailed Reliability Data         : Not supported by this device
+========================================================================================
+VOLUMES AND PARTITIONS
+========================================================================================
+
+[Volume 1]
+Drive Letter or Mount Point       : C:
+File System                       : NTFS
+Capacity                          : 237.49 GiB
+Free Space                        : 55.88 GiB
+Free Percentage                   : 23.5%
+Disk Number                       : 0
+========================================================================================
+BATTERY
+========================================================================================
+
+[Battery 1]
+Battery Name                      : Example Battery
+Design Capacity                   : 60000 mWh
+Full-Charge Capacity              : 51000 mWh
+Battery Health Percentage         : 85.0%
+Current Charge Percentage         : 89%
+Cycle Count                       : Not available
+========================================================================================
+PHYSICAL NETWORK ADAPTERS
+========================================================================================
+
+[Network Adapter 1]
+Name                              : Wi-Fi
+Physical or Virtual Classificati  : Physical hardware interface [Inferred; confidence: High; source: Application classification rules]
+Operational Status                : Up
+Negotiated Link Speed             : 866.7 Mbps
+Internet Speed Test               : Not applicable
+MAC Address                       : Redacted by privacy mode
+========================================================================================
+VIRTUAL NETWORK ADAPTERS
+========================================================================================
+
+[Network Adapter 2]
+Name                              : PdaNet Broadband Adapter
+Physical or Virtual Classificati  : Virtual or software adapter [Inferred; confidence: High; source: Application classification rules]
+Operational Status                : Disconnected
+Negotiated Link Speed             : Not negotiated - adapter disconnected
+========================================================================================
+WARNINGS AND COLLECTION LIMITATIONS
+========================================================================================
+
+[Warnings]
+Warning 1                         : WMI AdapterRAM may be truncated or represent preallocated/shared graphics memory.
+
+[Collection Limitations]
+Collection Limitation 1           : Physical Storage | Get-StorageReliabilityCounter | NotSupported | Not exposed by the storage driver.
+Warning                           : WMI AdapterRAM may be truncated or represent preallocated/shared graphics memory.
+========================================================================================
+REPORT METADATA
+========================================================================================
+
+[Metadata]
+Application Name                  : LouisMahdi System Inspector
+Application Version               : 2.2.0
+Report Schema Version             : 2.0
+Collection Time (Local ISO 8601)  : 2026-07-30T10:30:00+03:30
+Computer Name                     : SAMPLE-PC
+Current Windows User              : Redacted by privacy mode
+Administrator Status              : No
+Report Mode                       : Standard
+Privacy Mode Status               : Enabled
+========================================================================================
+FOOTER
+========================================================================================
+
+[Footer]
+Credit                            : Developed by LouisMahdi
+
+========================================================================================
+Developed by LouisMahdi
+https://github.com/TheLouisMahdi

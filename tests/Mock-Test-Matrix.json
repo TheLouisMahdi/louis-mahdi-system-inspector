@@ -1,0 +1,256 @@
+{
+  "schemaVersion": "1.0",
+  "application": "LouisMahdi System Inspector",
+  "coverage": [
+    {
+      "scenario": "Lenovo laptop",
+      "expected": "OEM normalization; laptop chassis; battery present",
+      "automation": "mock-or-manual"
+    },
+    {
+      "scenario": "ASUS laptop",
+      "expected": "ASUSTeK normalization",
+      "automation": "mock-or-manual"
+    },
+    {
+      "scenario": "HP laptop",
+      "expected": "HP manufacturer variants",
+      "automation": "mock-or-manual"
+    },
+    {
+      "scenario": "Dell desktop",
+      "expected": "No-battery NotApplicable",
+      "automation": "mock-or-manual"
+    },
+    {
+      "scenario": "Custom-built desktop",
+      "expected": "Placeholder OEM values rejected",
+      "automation": "mock-or-manual"
+    },
+    {
+      "scenario": "AMD processor",
+      "expected": "Processor identity and architecture",
+      "automation": "mock-or-manual"
+    },
+    {
+      "scenario": "Intel processor",
+      "expected": "Processor identity and architecture",
+      "automation": "mock-or-manual"
+    },
+    {
+      "scenario": "ARM64 Windows device",
+      "expected": "ARM64 architecture without x64 assumption",
+      "automation": "mock-or-manual"
+    },
+    {
+      "scenario": "Integrated graphics only",
+      "expected": "No dedicated-VRAM conclusion",
+      "automation": "mock-or-manual"
+    },
+    {
+      "scenario": "NVIDIA dedicated GPU",
+      "expected": "Optional nvidia-smi enrichment",
+      "automation": "mock-or-manual"
+    },
+    {
+      "scenario": "AMD dedicated GPU",
+      "expected": "All GPUs enumerated",
+      "automation": "mock-or-manual"
+    },
+    {
+      "scenario": "Intel Arc GPU",
+      "expected": "Intel discrete classification",
+      "automation": "mock-or-manual"
+    },
+    {
+      "scenario": "Hybrid AMD plus NVIDIA",
+      "expected": "Multiple GPUs; displays separate",
+      "automation": "mock-or-manual"
+    },
+    {
+      "scenario": "Multiple dedicated GPUs",
+      "expected": "All adapters independently enumerated",
+      "automation": "mock-or-manual"
+    },
+    {
+      "scenario": "One monitor",
+      "expected": "One active display",
+      "automation": "mock-or-manual"
+    },
+    {
+      "scenario": "Multiple monitors",
+      "expected": "Each active display indexed",
+      "automation": "mock-or-manual"
+    },
+    {
+      "scenario": "Remote Desktop session",
+      "expected": "Virtual/remote display handling",
+      "automation": "mock-or-manual"
+    },
+    {
+      "scenario": "Virtual machine",
+      "expected": "VM detection and virtual hardware",
+      "automation": "mock-or-manual"
+    },
+    {
+      "scenario": "8 GB plus 16 GB RAM",
+      "expected": "No channel-mode inference",
+      "automation": "mock-or-manual"
+    },
+    {
+      "scenario": "Matching memory modules",
+      "expected": "Independent module identities",
+      "automation": "mock-or-manual"
+    },
+    {
+      "scenario": "Duplicate DeviceLocator values",
+      "expected": "BankLabel/Tag/index remain separate",
+      "automation": "mock-or-manual"
+    },
+    {
+      "scenario": "Missing RAM manufacturer",
+      "expected": "Reported unavailable; inference separate",
+      "automation": "mock-or-manual"
+    },
+    {
+      "scenario": "NVMe SSD",
+      "expected": "Storage module media/bus",
+      "automation": "mock-or-manual"
+    },
+    {
+      "scenario": "SATA SSD",
+      "expected": "No fixed-disk=HDD assumption",
+      "automation": "mock-or-manual"
+    },
+    {
+      "scenario": "SATA HDD",
+      "expected": "Rotational media when provider reports",
+      "automation": "mock-or-manual"
+    },
+    {
+      "scenario": "USB storage",
+      "expected": "USB bus and reliability limitation",
+      "automation": "mock-or-manual"
+    },
+    {
+      "scenario": "RAID controller",
+      "expected": "No unsafe SMART conclusion",
+      "automation": "mock-or-manual"
+    },
+    {
+      "scenario": "Storage Spaces",
+      "expected": "Virtualized storage correlation",
+      "automation": "mock-or-manual"
+    },
+    {
+      "scenario": "Virtual disk",
+      "expected": "Virtual media classification",
+      "automation": "mock-or-manual"
+    },
+    {
+      "scenario": "System without a battery",
+      "expected": "NotApplicable; no zero health",
+      "automation": "mock-or-manual"
+    },
+    {
+      "scenario": "System with multiple batteries",
+      "expected": "Each battery indexed",
+      "automation": "mock-or-manual"
+    },
+    {
+      "scenario": "System without TPM",
+      "expected": "Explicit absence/status",
+      "automation": "mock-or-manual"
+    },
+    {
+      "scenario": "TPM disabled in firmware",
+      "expected": "Disabled distinct from absent",
+      "automation": "mock-or-manual"
+    },
+    {
+      "scenario": "TPM enabled but not ready",
+      "expected": "Ready state separate",
+      "automation": "mock-or-manual"
+    },
+    {
+      "scenario": "Legacy BIOS",
+      "expected": "Firmware mode independent of Secure Boot",
+      "automation": "mock-or-manual"
+    },
+    {
+      "scenario": "UEFI with Secure Boot disabled",
+      "expected": "Supported Yes / Enabled No",
+      "automation": "mock-or-manual"
+    },
+    {
+      "scenario": "UEFI with Secure Boot enabled",
+      "expected": "Supported Yes / Enabled Yes",
+      "automation": "mock-or-manual"
+    },
+    {
+      "scenario": "Non-administrator execution",
+      "expected": "PermissionDenied without termination",
+      "automation": "mock-or-manual"
+    },
+    {
+      "scenario": "Localized Windows installation",
+      "expected": "Invariant internal formatting",
+      "automation": "mock-or-manual"
+    },
+    {
+      "scenario": "Disconnected Ethernet",
+      "expected": "Not negotiated \u2014 disconnected",
+      "automation": "mock-or-manual"
+    },
+    {
+      "scenario": "Connected Gigabit Ethernet",
+      "expected": "1 Gbps normalized once",
+      "automation": "mock-or-manual"
+    },
+    {
+      "scenario": "Wi-Fi adapter",
+      "expected": "Link rate not internet speed",
+      "automation": "mock-or-manual"
+    },
+    {
+      "scenario": "VPN adapter",
+      "expected": "Virtual section",
+      "automation": "mock-or-manual"
+    },
+    {
+      "scenario": "Hyper-V adapter",
+      "expected": "Virtual section",
+      "automation": "mock-or-manual"
+    },
+    {
+      "scenario": "PdaNet adapter",
+      "expected": "Virtual section",
+      "automation": "mock-or-manual"
+    },
+    {
+      "scenario": "Missing Storage module",
+      "expected": "CIM fallback and limitation",
+      "automation": "mock-or-manual"
+    },
+    {
+      "scenario": "Missing TrustedPlatformModule module",
+      "expected": "CIM TPM fallback",
+      "automation": "mock-or-manual"
+    },
+    {
+      "scenario": "Missing nvidia-smi",
+      "expected": "VendorToolUnavailable",
+      "automation": "mock-or-manual"
+    },
+    {
+      "scenario": "WMI provider timeout",
+      "expected": "Isolated QueryFailed and continuation",
+      "automation": "mock-or-manual"
+    },
+    {
+      "scenario": "Null and malformed SMBIOS values",
+      "expected": "No blanks or zeros",
+      "automation": "mock-or-manual"
+    }
+  ]
+}

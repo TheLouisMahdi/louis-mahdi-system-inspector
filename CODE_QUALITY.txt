@@ -1,0 +1,18 @@
+LouisMahdi System Inspector
+Version: 2.2.0
+Schema: 2.1
+
+Production code language: English
+Production code comments: None
+Privacy mode: Enabled by default
+Network access: None unless the user clicks the GitHub link
+Launcher target: .NET Framework AnyCPU
+Runtime engine: Windows PowerShell 5.1
+Application payload: Managed resource
+Runtime Base64 decoding: None
+Embedded source verification: SHA-256
+In-process System.Management.Automation dependency: None
+Build-time tests: PowerShell parser, source contracts, launcher contracts, mock providers, compiled launcher self-test
+
+Developed by LouisMahdi
+github.com/TheLouisMahdi
