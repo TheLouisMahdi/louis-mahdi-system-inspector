@@ -1,0 +1,53 @@
+name: Windows validation
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: windows-latest
+    timeout-minutes: 20
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Validate PowerShell source
+        shell: powershell
+        run: .\tests\Validate-Source.ps1 -SourcePath .\src\LouisMahdi.SystemInspector.ps1
+
+      - name: Validate C# launcher contract
+        shell: powershell
+        run: .\tests\Validate-Launcher.ps1 -LauncherPath .\docs\LouisMahdiHost.cs -BuilderPath .\Build_LouisMahdi_System_Inspector_ONE_FILE.bat
+
+      - name: Run mock-provider tests
+        shell: powershell
+        run: .\tests\Run-MockTests.ps1
+
+      - name: Validate sample JSON
+        shell: powershell
+        run: |
+          $sample = Get-Content .\samples\Sample_System_Report.json -Raw | ConvertFrom-Json
+          if ($sample.SchemaVersion -ne '2.1') { throw 'Unexpected sample schema version.' }
+          if ($sample.Application.Version -ne '2.2.0') { throw 'Unexpected sample application version.' }
+          if (-not $sample.Privacy.Enabled) { throw 'Sample privacy mode must be enabled.' }
+
+      - name: Build and self-test portable EXE
+        shell: cmd
+        run: echo. | call Build_LouisMahdi_System_Inspector_ONE_FILE.bat
+
+      - name: Verify generated EXE checksum
+        shell: powershell
+        run: |
+          if (-not (Test-Path .\LouisMahdi_System_Inspector.exe)) { throw 'The EXE was not generated.' }
+          if (-not (Test-Path .\LouisMahdi_System_Inspector.exe.sha256.txt)) { throw 'The checksum file was not generated.' }
+          $actual = (Get-FileHash .\LouisMahdi_System_Inspector.exe -Algorithm SHA256).Hash.ToLowerInvariant()
+          $expected = ((Get-Content .\LouisMahdi_System_Inspector.exe.sha256.txt -Raw).Trim() -split '\s+')[0].ToLowerInvariant()
+          if ($actual -ne $expected) { throw 'Generated EXE checksum mismatch.' }
