@@ -1,0 +1,60 @@
+name: Feature request
+description: Suggest a focused improvement for LouisMahdi System Inspector
+title: "[Feature]: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Proposed features must preserve read-only operation, offline behavior, privacy by default, and Windows PowerShell 5.1 compatibility unless a future major version explicitly changes those contracts.
+
+  - type: textarea
+    id: use-case
+    attributes:
+      label: Use case
+      description: Describe the real problem this feature would solve.
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed behavior
+      description: Explain the expected user-visible or report behavior.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Project area
+      options:
+        - Hardware collection
+        - Windows or firmware collection
+        - Privacy and redaction
+        - TXT, JSON, HTML, or ZIP reports
+        - Desktop interface
+        - Command-line interface
+        - C# launcher
+        - Builder and tests
+        - Documentation
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: compatibility
+    attributes:
+      label: Compatibility considerations
+      description: Mention affected Windows versions, architectures, permissions, drivers, firmware, or providers.
+
+  - type: checkboxes
+    id: contracts
+    attributes:
+      label: Project contracts
+      options:
+        - label: The proposal can remain read-only.
+          required: true
+        - label: The proposal does not require telemetry or automatic uploads.
+          required: true
+        - label: The proposal can keep privacy mode enabled by default.
+          required: true
